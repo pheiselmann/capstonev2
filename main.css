@@ -23,11 +23,12 @@
 
 
 body {
-  /*background-image: url("images/cinema.jpg");*/
+  background-image: url("images/cinema.jpg");
   /*background-image: url("images/Movie01.jpg");*/
   /*background-image: url("images/light_film.jpg");*/
-  background-width: 100%;
-  background-height: 100%;
+ /* background-width: auto;
+  background-height: auto;*/
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -39,6 +40,7 @@ main {
   /*border-radius: 5px;
   border-radius-color: black;*/
  /* Work on this*/
+
   background-image: url("images/light_film.jpg");
 }
 
