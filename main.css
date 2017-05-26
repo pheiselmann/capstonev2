@@ -1,4 +1,59 @@
 
+
+.radio{
+  color:black;
+  font-size:15px;
+  position:relative;
+}
+.radio label{
+  position:relative;
+   padding-left:20px;
+}
+.radio label:after{
+  content:'';
+  width:15px;
+  height:15px;
+  border:3px solid;
+  position:absolute;
+  left:0;
+  top:1px;
+  border-radius:100%;
+  -ms-border-radius:100%;
+  -moz-border-radius:100%;
+  -webkit-border-radius:100%;
+  box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+.radio input[type="radio"]{
+   cursor: pointer; 
+  position:absolute;
+  width:100%;
+  height:100%;
+  z-index: 1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+
+.radio input[type="radio"]:checked + label{
+  color:red;  
+}
+.radio input[type="radio"]:checked + label:before{
+    content:'';
+  width:5px;
+  height:5px;
+  position:absolute;
+  background:#0B8;
+  left:5px;
+  top:6px;
+  border-radius:100%;
+  -ms-border-radius:100%;
+  -moz-border-radius:100%;
+  -webkit-border-radius:100%;
+}
+
 .fullscreenVideo {
     position: fixed;
     top: 50%;
@@ -22,14 +77,19 @@
 }
 
 
-body {
-  background-image: url("images/cinema.jpg");
-  /*background-image: url("images/Movie01.jpg");*/
-  /*background-image: url("images/light_film.jpg");*/
- /* background-width: auto;
-  background-height: auto;*/
+html {
+
+  background: url("images/cinema.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
+
+/*  background-image: url("images/cinema.jpg");
+*/  /*background-image: url("images/Movie01.jpg");*/
+  /*background-image: url("images/light_film.jpg");*/
+  /*background-size: cover;
+  background-repeat: no-repeat;*/
 }
 
 main {
@@ -42,6 +102,7 @@ main {
  /* Work on this*/
 
   background-image: url("images/light_film.jpg");
+  border-radius: 25px;
 }
 
 p {
@@ -57,23 +118,32 @@ h1 {
   margin-top: 20px;
 }
 
+.placeholder {
+  font-weight: bold;
+}
+
 button {
 	/*margin-top: 30px;*/
 	font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-/*.restart {
+.restart-game {
+  position: relative;
+  left: 0px;
+  margin-left: 0px;
 	margin-top: 100px;
 }
-*/
+
+
 .link:hover {
 	text-decoration: underline;
 }
 
 .trailer {
   border: 1px solid #E5E5E5;
-  margin-bottom: 0px;
+  background-color: black;
+  margin-bottom: 10px;
 }
 
 .link{
@@ -89,7 +159,7 @@ a:link {
 }
 
 .error-msg {
-	color: red;
+	color: lavender;
 }
 
 .movie-image {

@@ -217,12 +217,24 @@ function renderGenrePage(state, element) {
 }
 
 
+// function renderGenreChoices(state, element) {
+//   var choices = state.genrePicks.map(function(choice, index) {
+//     return (
+//       '<li>' +
+//         '<input type="radio" name="user-answer1" value="' + index + '" required>' +
+//         '<label>' + choice.name + '</label>' +
+//       '</li>'
+//     );
+//   });
+//   element.html(choices);
+// }
+
 function renderGenreChoices(state, element) {
   var choices = state.genrePicks.map(function(choice, index) {
     return (
-      '<li>' +
-        '<input type="radio" name="user-answer1" value="' + index + '" required>' +
-        '<label>' + choice.name + '</label>' +
+      '<li class="radio">' +
+        '<input type="radio" name="user-answer1" id="' + index + '" value="' + index + '" required>' +
+        '<label for="' + index + '" class="radio-label">' + choice.name + '</label>' +
       '</li>'
     );
   });
@@ -244,12 +256,25 @@ function renderDirectorPage(state, element) {
 }
 
 
+// function renderDirectorChoices(state, element) {
+//   var choices = state.directorPicks.map(function(choice, index) {
+//     return (
+//       '<li>' +
+//         '<input type="radio" name="user-answer2" value="' + index + '" required>' +
+//         '<label>' + choice.name + '</label>' +
+//       '</li>'
+//     );
+//   });
+//   element.html(choices);
+// }
+
+
 function renderDirectorChoices(state, element) {
   var choices = state.directorPicks.map(function(choice, index) {
     return (
-      '<li>' +
-        '<input type="radio" name="user-answer2" value="' + index + '" required>' +
-        '<label>' + choice.name + '</label>' +
+      '<li class="radio">' +
+        '<input type="radio" name="user-answer2" id="' + index + '" value="' + index + '" required>' +
+        '<label for="' + index + '" class="radio-label">' + choice.name + '</label>' +
       '</li>'
     );
   });
@@ -269,12 +294,25 @@ function renderStarPage(state, element) {
 }
 
 
+// function renderStarChoices(state, element) {
+//   var choices = state.starPicks.map(function(choice, index) {
+//     return (
+//       '<li>' +
+//         '<input type="radio" name="user-answer3" value="' + index + '" required>' +
+//         '<label>' + choice.name + '</label>' +
+//       '</li>'
+//     );
+//   });
+//   element.html(choices);
+// }
+
+
 function renderStarChoices(state, element) {
   var choices = state.starPicks.map(function(choice, index) {
     return (
-      '<li>' +
-        '<input type="radio" name="user-answer3" value="' + index + '" required>' +
-        '<label>' + choice.name + '</label>' +
+      '<li class="radio">' +
+        '<input type="radio" name="user-answer3" id="' + index + '" value="' + index + '" required>' +
+        '<label for="' + index + '" class="radio-label">' + choice.name + '</label>' +
       '</li>'
     );
   });
