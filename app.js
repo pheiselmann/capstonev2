@@ -339,7 +339,7 @@ function renderFinalPage(state, element) {
   //   ", " + findMovieName(state, state.movieKeys[1], state.directors) + ", and " +
   //   findMovieName(state, state.movieKeys[2], state.stars) + ".";
 
-  var resultElement1 = '<a class="popup-youtube" href="' + findMovieUrl(state, state.movieKeys[0], state.genres) + 
+  var resultElement1 = '<a <a target="_blank" class="popup-youtube" href="' + findMovieUrl(state, state.movieKeys[0], state.genres) + 
   '"><img class="movie-image popup-youtube" src="https://i.ytimg.com/vi/' + findYouTubeID(state, state.movieKeys[0], state.genres) + '/mqdefault.jpg"></a>';
       
   var resultElement2 = '<a target="_blank" href="' + findMovieUrl(state, state.movieKeys[1], state.directors) + 
@@ -471,7 +471,7 @@ $(function(){
   renderApp(state, PAGE_ELEMENTS);
   watchSubmit(state);
 
-  $('.final-page').on('click', 'popup-youtube', function(event) {
+  $('.final-page').on('click', '.popup-youtube', function(event) {
     this.magnificPopup({
     disableOn: 700,
     type: 'iframe',
