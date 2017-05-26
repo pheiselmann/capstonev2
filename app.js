@@ -330,7 +330,7 @@ function renderFinalPage(state, element) {
 
   var text = "Here are some movies you might enjoy, based upon the movie title you entered - as well as the genre," +
   " director, and star you chose.  Click on the items below to watch the trailers.  If you don't like these selections," +
-  " search again for the same movie (or another one). The choices will be different each time!";
+  " search again with the same title (or another one). The choices will be different each time!";
 
 
   // var text = "You chose " + state.movieKeys[0] + ", " +
@@ -339,22 +339,22 @@ function renderFinalPage(state, element) {
   //   ", " + findMovieName(state, state.movieKeys[1], state.directors) + ", and " +
   //   findMovieName(state, state.movieKeys[2], state.stars) + ".";
 
-  var resultElement1 = '<a href="' + findMovieUrl(state, state.movieKeys[0], state.genres) + 
-  '"><img class="movie-image" src="https://i.ytimg.com/vi/' + findYouTubeID(state, state.movieKeys[0], state.genres) + '/mqdefault.jpg"></a>';
+  var resultElement1 = '<a class="popup-youtube" href="' + findMovieUrl(state, state.movieKeys[0], state.genres) + 
+  '"><img class="movie-image popup-youtube" src="https://i.ytimg.com/vi/' + findYouTubeID(state, state.movieKeys[0], state.genres) + '/mqdefault.jpg"></a>';
       
-  var resultElement2 = '<a href="' + findMovieUrl(state, state.movieKeys[1], state.directors) + 
+  var resultElement2 = '<a target="_blank" href="' + findMovieUrl(state, state.movieKeys[1], state.directors) + 
   '"><img class="movie-image" src="https://i.ytimg.com/vi/' + findYouTubeID(state, state.movieKeys[1], state.directors) + '/mqdefault.jpg"></a>';
 
-  var resultElement3 = '<a href="' + findMovieUrl(state, state.movieKeys[2], state.stars) + 
+  var resultElement3 = '<a target="_blank" href="' + findMovieUrl(state, state.movieKeys[2], state.stars) + 
   '"><img class="movie-image" src="https://i.ytimg.com/vi/' + findYouTubeID(state, state.movieKeys[2], state.stars) + '/mqdefault.jpg"></a>';
 
-  var resultLink1 = '<a href="' + + findMovieUrl(state, state.movieKeys[0], state.genres) + '">' + 
+  var resultLink1 = '<a target="_blank" href="' + findMovieUrl(state, state.movieKeys[0], state.genres) + '">' + 
   findMovieName(state, state.movieKeys[0], state.genres) + ' - A ' + state.movieKeys[0] + '</a>';
 
-  var resultLink2 = '<a href="' + + findMovieUrl(state, state.movieKeys[1], state.directors) + '">' + 
+  var resultLink2 = '<a target="_blank" href="' + findMovieUrl(state, state.movieKeys[1], state.directors) + '">' + 
   findMovieName(state, state.movieKeys[1], state.directors) + ' - Directed by ' + state.movieKeys[1] + '</a>';
 
-  var resultLink3 = '<a href="' + + findMovieUrl(state, state.movieKeys[2], state.stars) + '">' + 
+  var resultLink3 = '<a target="_blank" href="' + findMovieUrl(state, state.movieKeys[2], state.stars) + '">' + 
   findMovieName(state, state.movieKeys[2], state.stars)  + ' - Starring ' + state.movieKeys[2] + '</a>';
 
   element.find('.results-text').text(text);
@@ -391,6 +391,21 @@ function findYouTubeID(state, movieKey, type) {
 
 
 // Event handlers
+
+
+// $(document).ready(function() {
+//   $('.popup-youtube').magnificPopup({
+//     disableOn: 700,
+//     type: 'iframe',
+//     mainClass: 'mfp-fade',
+//     removalDelay: 160,
+//     preloader: false,
+
+//     fixedContentPos: false
+//   });
+// });
+
+
 $(".restart-game").click(function(event){
   event.preventDefault();
   resetGame(state);
@@ -455,5 +470,17 @@ var PAGE_ELEMENTS = {
 $(function(){
   renderApp(state, PAGE_ELEMENTS);
   watchSubmit(state);
+
+  $('.final-page').on('click', 'popup-youtube', function(event) {
+    this.magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
+  });
   // $('.body').find('.fullscreenVideo').playbackRate = 0.1;
 });
