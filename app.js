@@ -328,11 +328,16 @@ function renderStarText(state, element) {
 
 function renderFinalPage(state, element) {
 
-  var text = "You chose " + state.movieKeys[0] + ", " +
-    state.movieKeys[1] + ", and " + state.movieKeys[2] + 
-    ". Your movie matches are " + findMovieName(state, state.movieKeys[0], state.genres) + 
-    ", " + findMovieName(state, state.movieKeys[1], state.directors) + ", and " +
-    findMovieName(state, state.movieKeys[2], state.stars) + ".";
+  var text = "Here are some movies you might enjoy, based upon the movie title you entered - as well as the genre," +
+  " director, and star you chose.  Click on the items below to watch the trailers.  If you don't like these selections," +
+  " search again for the same movie (or another one). The choices will be different each time!";
+
+
+  // var text = "You chose " + state.movieKeys[0] + ", " +
+  //   state.movieKeys[1] + ", and " + state.movieKeys[2] + 
+  //   ". Your movie matches are " + findMovieName(state, state.movieKeys[0], state.genres) + 
+  //   ", " + findMovieName(state, state.movieKeys[1], state.directors) + ", and " +
+  //   findMovieName(state, state.movieKeys[2], state.stars) + ".";
 
   var resultElement1 = '<a href="' + findMovieUrl(state, state.movieKeys[0], state.genres) + 
   '"><img class="movie-image" src="https://i.ytimg.com/vi/' + findYouTubeID(state, state.movieKeys[0], state.genres) + '/mqdefault.jpg"></a>';

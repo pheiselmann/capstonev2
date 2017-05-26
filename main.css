@@ -1,4 +1,96 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
 
+
+html {
+
+  background: url("images/cinema_big3.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+main {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 60px;
+	padding-top: 90px;
+  background-image: url("images/light_film.jpg");
+  border-radius: 25px;
+}
+
+p {
+	max-width: 1000px;
+}
+
+button:hover, .link:hover, .trailer:hover {
+	cursor: pointer;
+
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.placeholder {
+  font-weight: bolder;
+}
+
+button {
+	/*margin-top: 30px;*/
+	font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.restart-game {
+  position: relative;
+  left: 0px;
+  margin-left: 0px;
+	margin-top: 100px;
+}
+
+.results-text {
+  margin-bottom: 20px;
+}
+
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.trailer {
+  border: 1px solid #E5E5E5;
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+.link {
+	/*padding: 20px;*/
+	text-align: center;
+	margin-bottom: 20px;
+	text-decoration: none;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+.error-msg {
+	color: lavender;
+}
+
+.movie-image {
+	width: 100%;
+}
 
 .radio{
   color:black;
@@ -38,7 +130,7 @@
 }
 
 .radio input[type="radio"]:checked + label{
-  color:red;  
+  color:white;  
 }
 .radio input[type="radio"]:checked + label:before{
     content:'';
@@ -71,100 +163,6 @@
     -ms-filter: blur(10px);
   }
 
-* {
-	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
-}
-
-
-html {
-
-  background: url("images/cinema.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-/*  background-image: url("images/cinema.jpg");
-*/  /*background-image: url("images/Movie01.jpg");*/
-  /*background-image: url("images/light_film.jpg");*/
-  /*background-size: cover;
-  background-repeat: no-repeat;*/
-}
-
-main {
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 0 60px;
-	padding-top: 90px;
-  /*border-radius: 5px;
-  border-radius-color: black;*/
- /* Work on this*/
-
-  background-image: url("images/light_film.jpg");
-  border-radius: 25px;
-}
-
-p {
-	max-width: 1000px;
-}
-
-button:hover, .link:hover, .trailer:hover {
-	cursor: pointer;
-
-}
-
-h1 {
-  margin-top: 20px;
-}
-
-.placeholder {
-  font-weight: bold;
-}
-
-button {
-	/*margin-top: 30px;*/
-	font-weight: bold;
-  margin-bottom: 40px;
-}
-
-.restart-game {
-  position: relative;
-  left: 0px;
-  margin-left: 0px;
-	margin-top: 100px;
-}
-
-
-.link:hover {
-	text-decoration: underline;
-}
-
-.trailer {
-  border: 1px solid #E5E5E5;
-  background-color: black;
-  margin-bottom: 10px;
-}
-
-.link{
-	/*padding: 20px;*/
-	text-align: center;
-	margin-bottom: 20px;
-	text-decoration: none;
-}
-
-a:link {
-	text-decoration: none;
-	color: black;
-}
-
-.error-msg {
-	color: lavender;
-}
-
-.movie-image {
-	width: 100%;
-}
 
 .row {
   max-width: 1000px;
