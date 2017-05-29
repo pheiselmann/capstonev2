@@ -366,6 +366,7 @@ function renderFinalPage(state, element) {
   element.find('.trailer1-link').html(resultLink1);
   element.find('.trailer2-link').html(resultLink2);
   element.find('.trailer3-link').html(resultLink3);
+  //alert(JSON.stringify(state.resultsMinusGDPickIndices));
 }
 
 
@@ -482,5 +483,6 @@ $(function(){
   //   fixedContentPos: false
   // });
   // });
+  
   // $('.body').find('.fullscreenVideo').playbackRate = 0.1;
 });
