@@ -40,11 +40,61 @@ html {
 }
 
 main {
+  position: relative;
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 0 60px;
 	padding-top: 90px;
   background-image: url("images/light_film.jpg");
+  border-radius: 25px;
+}
+
+.genre-text, .director-text, .star-text {
+  padding-top: 30px;
+}
+
+.star, .star2, .star3, .star4, .star5 {
+  position: absolute;
+  top: 40px;
+}
+
+.star {
+  left: 90px;
+}
+
+.star2 {
+  left: 140px;
+}
+
+.star3 {
+  left: 190px;
+}
+
+.star4 {
+  left: 240px;
+}
+
+.star5 {
+  left: 290px;
+}
+
+.projector {
+  position: absolute;
+  left: 640px;
+  top: 65px;
+  border-radius: 25px;
+}
+
+.ticket {
+  position: absolute;
+  left: 640px;
+  top: 85px;
+}
+
+.genre {
+  position: absolute;
+  left: 730px;
+  top: 85px;
   border-radius: 25px;
 }
 
@@ -80,11 +130,15 @@ ul {
   list-style-type: none;
 }
 
+li {
+  margin-left: -20px;
+}
+
 .restart-game {
   position: relative;
   left: 0px;
   margin-left: 0px;
-	margin-top: 100px;
+	margin-top: 60px;
 }
 
 .results-text {

@@ -469,9 +469,6 @@ var PAGE_ELEMENTS = {
 
 
 $(function(){
-  renderApp(state, PAGE_ELEMENTS);
-  watchSubmit(state);
-
   // $('.final-page').on('click', '.popup-youtube', function(event) {
   //   this.magnificPopup({
   //   disableOn: 700,
@@ -483,6 +480,10 @@ $(function(){
   //   fixedContentPos: false
   // });
   // });
+  renderApp(state, PAGE_ELEMENTS);
+  watchSubmit(state);
+
   
+
   // $('.body').find('.fullscreenVideo').playbackRate = 0.1;
 });
